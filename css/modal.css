@@ -1,0 +1,127 @@
+
+.modalNew{
+    width: 200px;
+    height: 180px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(233, 233, 233);
+    padding: 5px 20px;
+    box-shadow: 0 0 4px grey;
+    position: fixed;
+    top: 30vh;
+    transform: translateX(-200px);
+    z-index: 330;
+}
+.modal__b{
+    width: 100%;
+    
+}
+.modal__b p {
+    text-transform: uppercase;
+    border-top:  1px dotted grey;
+    border-bottom: 1px dotted grey;
+    margin: 20px 0;
+    padding: 5px 0;
+    color: rgb(39, 39, 39);
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.modal__colors {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    grid-gap: 6px;
+}
+.coll{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.coll:hover{
+    box-shadow: 0 0 8px rgb(102, 102, 102);
+}
+.col__blue {
+    background: blue;
+}
+.col__violet {
+    background: violet;
+}
+.col__lightblue{
+    background: lightblue;
+}
+.col__orange{
+    background: orange;
+}
+.col__grey{
+    background: grey;
+}
+.col__green{
+    background: green;
+}
+.col__yellow{
+    background: yellow;
+}
+.col__crimson{
+background: crimson;
+}
+
+.set-icon{
+    width: 55px;
+    height: 55px;
+    background: rgb(219, 217, 217);
+    position: absolute;
+    right:-56px;
+    top:-1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 0 6px 6px  0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.set-icon:hover{
+    color: rgb(24, 116, 255);
+   
+}
+
+.back{
+    transform: translateX(-250px);
+    transition: all 0.5s ease-in-out;
+}
+.next{
+    transform: translateX(0);
+}
+
+.blue {
+    color: var(--background);
+    border-color: var(--background);
+}
+.purple {
+    color: purple;
+    border-color: purple;
+}
+.lightblue {
+    color: lightblue;
+    border-color: lightblue;
+}
+.orange {
+    color: orange;
+    border-color: orange;
+}
+.grey {
+    color: grey;
+    border-color: grey;
+}
+.green {
+    color: green;
+    border-color: green;
+}
+.yellow {
+    color: yellow;
+    border-color: yellow;
+}
+.crimson{
+    color: crimson;
+    border-color: crimson;
+}

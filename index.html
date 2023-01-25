@@ -10,98 +10,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/style.css">
-    
+
 </head>
 
 <body>
-   
+    <!-- Navbar start -->
+    <div class="container">
+        <navbar class="navbar d-flex justify-content-between align-items-center ">
+            <div>Logo</div>
+            <ul class="d-flex m-0 gap-5">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </navbar>
+    </div>
+    <!-- Navbar end -->
     <!-- Header start -->
     <header class="header">
-        <div class="header__block  d-flex flex-column text-center ">
-            <div class="header__title mb-5">
-                <h3>Technology</h3>
-            </div>
-
-            <div class="header__text mb-5">
-                <h2 class="mb-3" id="color">CURRENTLY WORKING ON NEW SITE</h2>
-                <h1>STAY TUNED</h1>
-            </div>
-           
-            <div class="header__date row  d-flex justify-content-evenly mb-5 px-0">
-                <div class="date__days col-xl-2 col-lg-2 col-md-5 col-sm-12  mb-2">
-                    <span id="number" class="days">00</span>
-                    <h6 id="color">days</h6>
-                </div>
-                <div class="date__hours col-xl-2 col-lg-2 col-md-5 col-sm-12 mb-2">
-                    <span id="number" class="hours">00</span>
-                    <h6 id="color">hours</h6>
-                </div>
-                <div class="date__minutes col-xl-2 col-lg-2 col-md-5 col-sm-12 mb-2">
-                    <span id="number" class="minute">00</span>
-                    <h6 id="color">minutes</h6>
-                </div>
-                <div class="date__seconds col-xl-2 col-lg-2 col-md-5 col-sm-12 mb-2">
-                    <span id="number" class="second">00</span>
-                    <h6 id="color">seconds</h6>
-                </div>
-
-            </div>
-
-            <div class="header__end mt-5">
-                <h6 class="mb-3 ">Subscribe on newsletter Learn first about the launch</h6>
-
-                <form action="" class="d-flex row">
-                    <input type="email" id="email" placeholder="Enter your email..." class="col-xl-2 col-lg-12 col-md-12 col-sm-12 mb-2">
-                    <input type="button" value="Subscribe" id="btn" class="col-xl-2 col-lg-12 col-md-12 col-sm-12-w-100">
-                </form>
-                <h5 id="hideText" class="text-center  hideText" style="font-weight: 500;">Subscribing...</h5>
-
-                <div class="header__end__icons row mt-5 d-flex justify-content-evenly mb-lg-5 mb-md-5 mb-sm-5">
-                    <div class="icons__icon  col-xl-2 col-lg-4 col-md-6 col-sm-12 ">
-                        <i class="fab fa-facebook-f"></i>
-                    </div>
-                    <div class="icons__icon  col-xl-2 col-lg-4 col-md-6 col-sm-12 ">
-                        <i class="fab fa-twitter"></i>
-                    </div>
-                    <div class="icons__icon  col-xl-2 col-lg-4 col-md-6 col-sm-12">
-                        <i class="fab fa-linkedin"></i>
-                    </div>
-                    <div class="icons__icon  col-xl-2 col-lg-4 col-md-6 col-sm-12">
-                        <i class="fab fa-pinterest"></i>
-                    </div>
-                    <div class="icons__icon  col-xl-2 col-lg-4 col-md-6 col-sm-12">
-                        <i class="fab fa-dribbble"></i>
-                    </div>
-                    <div class="icons__icon  col-xl-2 col-lg-4 col-md-6 col-sm-12">
-                        <i class="fab fa-google-plus-g"></i>
-                    </div>
-                </div>
-            </div>
+        <div class="container d-flex justify-content-between">
+            <div>Images-Slider</div>
+            <div>Form-Contact</div>
         </div>
-
-
     </header>
     <!-- Header end -->
-   <!-- Modal start -->
-   <div class="modalNew">
-    <div class="modal__b">
-        <p>Colors:</p>
-        <div class="modal__colors">
-            <div class="coll col__blue"></div>
-            <div class="coll col__violet"></div>
-            <div class="coll col__lightblue"></div>
-            <div class="coll col__orange"></div>
-            <div class="coll col__grey"></div>
-            <div class="coll col__green"></div>
-            <div class="coll col__yellow"></div>
-            <div class="coll col__crimson"></div>
-        </div>
-    </div>
-    <div class="set-icon">
-        <i class="fa fa-cog fa-spin fa-fw"></i>
-    </div>
-</div>
-<!-- Modal end -->
+
     <!-- Section 1 start -->
     <section class="section1">
         <div class="container">
@@ -300,11 +234,10 @@
 
     <!-- Footer start -->
     <footer class=" footer d-flex justify-content-center align-items-center ">
-        <p style="color: grey; font-size: 14px; ">© 2015 . All Rights Reserved. Designed by <span style="color: var(--background); font-size: 15px; font-weight: 500; ">Template Stock</span></p>
+        <p style="color: grey; font-size: 14px; ">© All Rights Reserved. Designed by Lako.uz</p>
     </footer>
     <!-- Footer end -->
 
-    <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/main.js "></script>
 </body>
 

@@ -1,5 +1,4 @@
-@import url('./modal.css');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 :root {
     --color: #fff;
     --background: #00b9f7;
@@ -11,16 +10,28 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
+
+
+/* navbar start */
+
+navbar {
+    height: 80px;
+}
+
+
+/* navbar end */
 
 
 /* header start */
 
 header.header {
     width: 100%;
+    max-width: 2180px;
+    margin: 0 auto;
     min-height: 820px;
-    background: linear-gradient(rgba(5, 5, 5, 0.7), rgba(0, 0, 0, 0.7)), url('../img/slider.jpg');
+    background: linear-gradient(rgba(5, 5, 5, 0.7), rgba(0, 0, 0, 0.7)), url("../img/slider.jpg");
     background-position: end;
     background-repeat: no-repeat;
     background-size: cover;
@@ -146,7 +157,7 @@ h6 {
     max-width: 80%;
     margin: auto;
     margin-bottom: 110px !important;
-    grid-gap: 5px
+    grid-gap: 5px;
 }
 
 .icons__icon {
@@ -297,7 +308,7 @@ h6 {
 
 .block__upside1:hover.block__upside1::after {
     visibility: visible;
-    animation: after .3s ease-out alternate;
+    animation: after 0.3s ease-out alternate;
 }
 
 .block__downside__icons {
@@ -503,5 +514,3 @@ footer.footer {
     display: none;
     margin-top: 20px;
 }
-
-

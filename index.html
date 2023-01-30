@@ -18,6 +18,24 @@
 <body>
     <!-- Navbar start -->
     <div class="navbar-main">
+        <nav class="container-fluid px-5 nav border-bottom bg-white  d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center gap-3">
+                <p class="fs-5 m-0 p-0">Подпишитесь на нас в соц сетях:</p>
+                <a href="https://www.facebook.com/infolako"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/infolakouz/"><i class="bi bi-instagram"></i></a>
+                <a href="https://t.me/infolako"><i class="bi bi-telegram"></i></a>
+            </div>
+            <div class="d-flex align-items-center gap-5">
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <a href="https://yandex.uz/maps/org/premier_print/83695593968/?ll=69.198835%2C41.278821&z=17" target="_blank" class="fs-5 m-0 p-0">Чиланзарский район, массив Чиланзор, квартал Ц, 6А</a>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-telephone-fill"></i>
+                    <p class="fs-5 m-0 p-0"><a href="tel:+998 71 200 25 55">+998 71 200 25 55</a></p>
+                </div>
+            </div>
+        </nav>
         <navbar class="container-fluid px-5 navbar d-flex justify-content-between align-items-center ">
             <div class="w-auto h-100">
                 <a href="#">
@@ -31,6 +49,8 @@
             </ul>
         </navbar>
     </div>
+    <!-- toast -->
+    <div class="toast toast-warning"></div>
     <!-- Navbar end -->
     <!-- Header start -->
     <header class="header" id="header">
@@ -88,7 +108,7 @@
                     <input type="text" id="name" class="form-control">
                     <label for="phone" class="form-label fs-6">Номер телефона</label>
                     <div class="d-flex form-control px-0 py-1 align-items-center">
-                        <span class="fs-6 border-1 px-2">+998</span><input type="tel" id="phone" class="form-control border-0 px-0 outline-none">
+                        <span class="fs-6 border-1 px-2">+998</span><input type="tel" id="phone" class="form-control border-0 px-0 outline-none" require>
                     </div>
                     <label for="comment" class="form-label fs-6">Комментарий</label>
                     <textarea id="comment" class="form-control"></textarea>
@@ -115,46 +135,40 @@
 
                     <div class="section1__line__right col-5 d-flex justify-content-start w-xl-100 w-lg-75 w-md-50 w-sm-25 ">______________________</div>
                 </div>
-                <h2 style="color:grey; font-weight:500; font-size: 26px; " class="my-3 ">OUR FEATURE SERVICE</h2>
-                <p style="color: grey; font-size: small; ">Lorem ipsum dolor sit amet ectetur sicing elit, sed do eiusmod tempor incididunt ut labore.</p>
             </div>
 
             <div class="section1__main__content row text-center mt-5 ">
                 <div class="block col-xl-3 col-lg-3 col-md-6 col-sm-12 ">
                     <div class="block__upside ">
-                        <i class="fas fa-laptop "></i>
+                        <img src="./img/icons/1.png" alt="1" width="100%">
                     </div>
                     <div class="block__downside ">
-                        <h3 style="font-weight: 500; ">WEB</h3>
-                        <p>Lorem ipsum dolor sit amet ectetur sicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <h3 style="font-weight: 500; ">Низкие цены</h3>
                     </div>
                 </div>
                 <div class="block col-xl-3 col-lg-3 col-md-6 col-sm-12 ">
                     <div class="block__upside ">
-                        <i class="far fa-image "></i>
+                        <img src="./img/icons/2.png" alt="2" width="100%">
                     </div>
                     <div class="block__downside ">
-                        <h3 style="font-weight: 500; ">GRAPHIC</h3>
-                        <p>Lorem ipsum dolor sit amet ectetur sicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <h3 style="font-weight: 500; ">Широкие ассортимент</h3>
                     </div>
                 </div>
                 <div class="block col-xl-3 col-lg-3 col-md-6 col-sm-12 ">
                     <div class="block__upside ">
-                        <i class="fas fa-rocket "></i>
+                        <img src="./img/icons/3.png" alt="3" width="100%">
                     </div>
                     <div class="block__downside ">
-                        <h3 style="font-weight: 500; ">MARKETING</h3>
-                        <p>Lorem ipsum dolor sit amet ectetur sicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <h3 style="font-weight: 500; ">Краткие сроки</h3>
                     </div>
                 </div>
                 <div class="block col-xl-3 col-lg-3 col-md-6 col-sm-12 ">
                     <div class="block__upside ">
-                        <i class="fas fa-shopping-cart "></i>
+                        <img src="./img/icons/4.png" alt="4" width="100%">
                     </div>
                     <div class="block__downside ">
-                        <h3 style="font-weight: 500; ">E-COMMERCE
+                        <h3 style="font-weight: 500; ">Качество продукции и услуг
                         </h3>
-                        <p>Lorem ipsum dolor sit amet ectetur sicing elit, sed do eiusmod tempor incididunt ut labore.</p>
                     </div>
                 </div>
             </div>
@@ -168,104 +182,66 @@
         <div class="container-fluid px-5 ">
             <div class="section2__main__title w-50 mx-auto text-center ">
                 <h2 style="font-weight: 500; padding-top: 110px; color: #fff; ">О нас</h2>
-                <div class="section1__prize row my-4 ">
-                    <div class="section1__line__left col-5 d-flex justify-content-end w-xl-100 w-lg-75 w-md-50 w-sm-25 ">____________________</div>
+                <div class="section2__prize row my-4 ">
+                    <div class="section2__line__left col-5 d-flex justify-content-end w-xl-100 w-lg-75 w-md-50 w-sm-25 ">____________________</div>
 
-                    <div class="section1__prize__icon col-2 ">
+                    <div class="section2__prize__icon col-2 ">
                         <i class="fas fa-users "></i>
                     </div>
 
-                    <div class="section1__line__right col-5 d-flex justify-content-start w-xl-100 w-lg-75 w-md-50 w-sm-25 ">____________________</div>
+                    <div class="section2__line__right col-5 d-flex justify-content-start w-xl-100 w-lg-75 w-md-50 w-sm-25 ">____________________</div>
                 </div>
                 <p style="color:grey; font-size: 16px; text-align: left; " class="my-3 ">Lako специализируется на изготовлении корпоративной сувенирной продукции. У нас Вы можете заказать корпоративные подарки для Ваших партнеров и коллег, промо-продукцию для проведения акций, выставок и других мероприятий, а также получить
                     консультацию о разных методах нанесения на изделия, подобрать сувениры под Вашу стилистику и бюджет. </p>
             </div>
-
             <div class="section2__main__content row text-center mt-5 ">
                 <div class="block col-xl-4 col-lg-6 col-md-6 col-sm-12 ">
                     <div class="block__upside1 ">
                         <img src="./img/01.jpg " alt="girl ">
-
-                        <div class="block__downside__icons row ">
-
-                            <div class="section2__icons first col-5 ">
-                                <a href=" "><i class="fab fa-facebook-f "></i></a>
-                            </div>
-                            <div class="section2__icons second col-5 ">
-                                <a href=" "><i class="fab fa-twitter "></i></a>
-                            </div>
-                            <div class="section2__icons third col-5 ">
-                                <a href=" "><i class="fab fa-linkedin "></i></a>
-                            </div>
-                            <div class="section2__icons four col-5 ">
-                                <a href=" "><i class="fab fa-google-plus-g "></i></a>
-                            </div>
-
-                        </div>
                     </div>
                     <p class="fs-5 my-2" style="color: var(--background); ">Корпоративные подарки</p>
                 </div>
-
                 <div class="block col-xl-4 col-lg-6 col-md-6 col-sm-12 ">
                     <div class="block__upside1 ">
                         <img src="./img/02.jpg " alt="girl ">
-
-                        <div class="block__downside__icons row ">
-
-                            <div class="section2__icons first col-5 ">
-                                <a href=" "><i class="fab fa-facebook-f "></i></a>
-                            </div>
-                            <div class="section2__icons second col-5 ">
-                                <a href=" "><i class="fab fa-twitter "></i></a>
-                            </div>
-                            <div class="section2__icons third col-5 ">
-                                <a href=" "><i class="fab fa-linkedin "></i></a>
-                            </div>
-                            <div class="section2__icons four col-5 ">
-                                <a href=" "><i class="fab fa-google-plus-g "></i></a>
-                            </div>
-
-                        </div>
                     </div>
                     <p class="fs-5 my-2" style="color: var(--background); ">Бизнес сувениры</p>
                 </div>
-
                 <div class="block col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-5 ">
                     <div class="block__upside1 ">
                         <img src="./img/03.jpg " alt="girl ">
-
-                        <div class="block__downside__icons row ">
-
-                            <div class="section2__icons first col-5 ">
-                                <a href=" "><i class="fab fa-facebook-f "></i></a>
-                            </div>
-                            <div class="section2__icons second col-5 ">
-                                <a href=" "><i class="fab fa-twitter "></i></a>
-                            </div>
-                            <div class="section2__icons third col-5 ">
-                                <a href=" "><i class="fab fa-linkedin "></i></a>
-                            </div>
-                            <div class="section2__icons four col-5 ">
-                                <a href=" "><i class="fab fa-google-plus-g "></i></a>
-                            </div>
-
-                        </div>
                     </div>
                     <p class="fs-5 my-2 " style="color: var(--background); "> Услуги печати</p>
                 </div>
-
-
-
             </div>
         </div>
-
         </div>
     </section>
     <!-- Section 2 end -->
 
     <!-- Footer start -->
-    <footer id="footer" class=" footer d-flex justify-content-center align-items-center ">
-        <p style="color: grey; font-size: 14px; ">© All Rights Reserved. Designed by Lako.uz</p>
+    <footer id="footer" class=" footer ">
+        <div class="container-fluid p-5 d-flex justify-content-between">
+            <div>
+                <img width="80" height="30" src="./img/logo.png" alt="logo">
+                <p>Phone:
+                    <a href="tel:+998 71 200 25 55">+998 71 200 25 55</a> </p>
+                <p>Telegram:
+                    <a href="https://t.me/infolako">https://t.me/infolako</a>
+                </p>
+                <p>Facebook:
+                    <a href="https://www.facebook.com/infolako">https://www.facebook.com/infolako</a>
+                </p>
+                <p>Instagram: <a href="https://www.instagram.com/infolakouz/">https://www.instagram.com/infolakouz/</a> </p>
+                <p>© All Rights Reserved. Designed by Lako.uz</p>
+            </div>
+            <div class="maps">
+                <img width="650" src="./img/map.png" alt="map" usemap="#workmap">
+                <map name="workmap">
+                    <area shape="rect" coords="0,0,650,400" alt="Computer" target="_blank" href="https://yandex.uz/maps/org/premier_print/83695593968/?ll=69.198835%2C41.278821&z=17">
+                  </map>
+            </div>
+        </div>
     </footer>
     <!-- Footer end -->
 

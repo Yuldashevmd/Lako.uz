@@ -40,6 +40,7 @@ let newUser = {};
 
 // get-values-from-inputs
 formSubmit.addEventListener("click", (e) => {
+  e.preventDefault();
   if (userName.value === "" || userPhone.value === "") {
     toast.style.display = "flex";
     toast.classList.add("toast-warning");
@@ -50,7 +51,6 @@ formSubmit.addEventListener("click", (e) => {
       toast.classList.remove("toast-warning");
     }, 2000);
   } else {
-    e.preventDefault();
     formSubmit.setAttribute("disabled", true);
     toast.classList.add("toast-success");
     toast.style.display = "flex";

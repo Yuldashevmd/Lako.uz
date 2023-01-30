@@ -108,3 +108,19 @@ li.slide[data-active-slide] {
 .slides-circles>div[data-active-slide] {
     background-color: rgb(168, 166, 166);
 }
+
+
+/* media */
+
+@media screen and (max-width: 992px) and (min-width: 535px) {
+    .carousel {
+        height: 350px !important;
+    }
+}
+
+@media screen and (max-width: 535px) {
+    .carousel {
+        width: 100%;
+        max-height: 150px !important;
+    }
+}

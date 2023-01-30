@@ -28,3 +28,49 @@ const changeSlide = (offset) => {
 
 setInterval(changeSlide.bind(null, 1), 6000);
 // carousel end
+
+// form start
+const userName = document.querySelector("#name");
+const userPhone = document.querySelector("#phone");
+const userComment = document.querySelector("#comment");
+const formSubmit = document.querySelector("#submit");
+const message = document.querySelector("#message");
+
+let newUser = {};
+
+// get-values-from-inputs
+formSubmit.addEventListener("click", (e) => {
+  e.preventDefault();
+  formSubmit.setAttribute("disabled", true);
+
+  newUser = {
+    name: userName.value,
+    phone: userPhone.value,
+    comment: userComment.value ?? "",
+  };
+  fetch("lako/calluser", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify(newUser),
+  })
+    .then((res) => res.json())
+    .then((res) => console.log(res, "res"))
+    .catch((err) => console.log(err, "err"));
+  message.style.color = "green";
+  message.textContent = "Запрос отправлено...";
+
+  setTimeout(() => {
+    userName.value = "";
+    userPhone.value = "";
+    userComment.value = "";
+    message.textContent = "";
+  }, 1500);
+  setTimeout(() => {
+    formSubmit.disabled = false;
+  }, 2500);
+  console.log(newUser);
+});
+// form end

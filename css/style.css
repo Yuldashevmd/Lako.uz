@@ -10,7 +10,7 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    font-family: "Roboto", sans-serif;
+    font-family: "Times New Roman", sans-serif;
 }
 
 a {
@@ -37,6 +37,15 @@ navbar.navbar {
 
 navbar img {
     width: 200px !important;
+}
+
+.btn-primary {
+    background: #002147;
+    border-color: #002147;
+}
+
+.btn-primary:hover {
+    background: #0152af;
 }
 
 
@@ -420,11 +429,11 @@ h6 {
 }
 
 .toast-warning {
-    background-color: rgba(252, 39, 75, 0.796);
+    background-color: rgb(252, 39, 75);
 }
 
 .toast-success {
-    background-color: rgba(40, 199, 93, 0.867);
+    background-color: rgb(40, 199, 93);
 }
 
 

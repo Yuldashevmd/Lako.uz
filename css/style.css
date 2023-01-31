@@ -345,11 +345,6 @@ h6 {
 }
 
 .block__downside {
-    transition: all 0.2s linear;
-}
-
-.block__downside:hover {
-    color: var(--background);
     cursor: pointer;
 }
 

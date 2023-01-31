@@ -12,41 +12,40 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/carousel.css">
-
 </head>
 
 <body>
     <!-- Navbar start -->
     <div class="navbar-main">
-        <nav class="container-fluid px-5 nav border-bottom bg-white  d-flex align-items-center justify-content-between">
-            <div class="d-flex align-items-center gap-3">
-                <p class=" m-0 p-0">Подпишитесь на нас в соц сетях:</p>
-                <a target="_blank" href="https://www.facebook.com/infolako"><i class="bi bi-facebook"></i></a>
-                <a target="_blank" href="https://www.instagram.com/infolakouz/"><i class="bi bi-instagram"></i></a>
-                <a target="_blank" href="https://t.me/infolako"><i class="bi bi-telegram"></i></a>
-            </div>
-            <div class="d-flex align-items-center gap-5 location_phone">
-                <div class="d-flex align-items-center gap-2">
-                    <i class="bi bi-geo-alt-fill"></i>
-                    <a href="https://yandex.uz/maps/org/premier_print/83695593968/?ll=69.198835%2C41.278821&z=17" target="_blank" class=" m-0 p-0">Чиланзарский район, массив Чиланзор, квартал Ц, 6А</a>
-                </div>
-                <div class="d-flex align-items-center gap-2">
-                    <i class="bi bi-telephone-fill"></i>
-                    <p class="m-0 p-0"><a href="tel:+998 71 200 25 55">+998 71 200 25 55</a></p>
-                </div>
-            </div>
-        </nav>
         <navbar class="container-fluid px-5 navbar d-flex justify-content-between align-items-center ">
-            <div class="w-auto h-100">
+            <div class="w-auto h-100 d-flex align-items-center">
                 <a href="#">
                     <img src="./img/logo.png" alt="logo">
                 </a>
+                <ul class="d-flex m-0 gap-5">
+                    <li><a href="#header">Главная</a></li>
+                    <li><a href="#footer">Контакты</a></li>
+                    <li><a href="#section2">О нас</a></li>
+                </ul>
             </div>
-            <ul class="d-flex m-0 gap-5">
-                <li><a href="#header">Главная</a></li>
-                <li><a href="#footer">Контакты</a></li>
-                <li><a href="#section2">О нас</a></li>
-            </ul>
+            <div>
+                <div class="d-flex align-items-center gap-3 justify-content-end border-bottom">
+                    <p class=" m-0 p-0">Подпишитесь на нас в соц сетях:</p>
+                    <a target="_blank" href="https://www.facebook.com/infolako"><i class="bi bi-facebook"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/infolakouz/"><i class="bi bi-instagram"></i></a>
+                    <a target="_blank" href="https://t.me/infolako"><i class="bi bi-telegram"></i></a>
+                </div>
+                <div class="d-flex align-items-center gap-3 location_phone">
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <a href="https://yandex.uz/maps/org/premier_print/83695593968/?ll=69.198835%2C41.278821&z=17" target="_blank" class=" m-0 p-0">Чиланзарский район, массив Чиланзор, квартал Ц, 6А</a>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-telephone-fill"></i>
+                        <p class="m-0 p-0"><a href="tel:+998 71 200 25 55">+998 71 200 25 55</a></p>
+                    </div>
+                </div>
+            </div>
         </navbar>
     </div>
     <!-- toast -->
@@ -221,22 +220,52 @@
 
     <!-- Footer start -->
     <footer id="footer" class=" footer ">
-        <div class=" pre-footer container-fluid p-5 d-flex justify-content-between">
-            <div>
-                <img width="80" height="30" src="./img/logo.png" alt="logo">
-                <p>Phone:
-                    <a href="tel:+998 71 200 25 55">+998 71 200 25 55</a> </p>
-                <p>Telegram:
-                    <a href="https://t.me/infolako">https://t.me/infolako</a>
-                </p>
-                <p>Facebook:
-                    <a href="https://www.facebook.com/infolako">https://www.facebook.com/infolako</a>
-                </p>
-                <p>Instagram: <a href="https://www.instagram.com/infolakouz/">https://www.instagram.com/infolakouz/</a> </p>
+        <div class=" pre-footer container-fluid p-5 pb-0 d-flex justify-content-between">
+            <div class="d-flex flex-column justify-content-between">
+                <img width="100" height="40" src="./img/logo.png" alt="logo">
                 <p>© All Rights Reserved. Designed by Lako.uz</p>
             </div>
+            <div class="d-flex flex-column gap-4">
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-phone"></i>
+                    <a href="tel:+998 71 200 25 55">Phone</a>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-telegram"></i>
+                    <a href="https://t.me/infolako">Telegram</a>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-facebook"></i>
+                    <a href="https://www.facebook.com/infolako">Facebook</a>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-instagram"></i>
+                    <a href="https://www.instagram.com/infolakouz/">Instagram</a>
+                </div>
+            </div>
+            <div>
+                <ul class="d-flex flex-column m-0 gap-4">
+                    <li><a href="#header">Главная</a></li>
+                    <li><a href="#footer">Контакты</a></li>
+                    <li><a href="#section2">О нас</a></li>
+                </ul>
+            </div>
+            <div>
+                <div>
+                    <div class="d-flex flex-column gap-3 location_phone">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <a href="https://yandex.uz/maps/org/premier_print/83695593968/?ll=69.198835%2C41.278821&z=17" target="_blank" class=" m-0 p-0">Чиланзарский район, массив Чиланзор, квартал Ц, 6А</a>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-telephone-fill"></i>
+                            <p class="m-0 p-0"><a href="tel:+998 71 200 25 55">+998 71 200 25 55</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="maps">
-                <img width="650" src="./img/map.png" alt="map" usemap="#workmap">
+                <img width="350" height="200px" src="./img/map.png" alt="map" usemap="#workmap">
                 <map name="workmap">
                     <area shape="rect" coords="0,0,650,400" alt="Computer" target="_blank" href="https://yandex.uz/maps/org/premier_print/83695593968/?ll=69.198835%2C41.278821&z=17">
                   </map>

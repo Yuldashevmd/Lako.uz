@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 :root {
     --color: #fff;
-    --background: #00b9f7;
+    --background: whitesmoke;
 }
 
 * {
@@ -69,8 +69,38 @@ header .header_content {
 .form_contact {
     width: 50%;
     height: 500px;
-    color: #242424;
+    color: whitesmoke;
     padding: 20px 24px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.form_contact input {
+    background-color: transparent;
+    color: whitesmoke;
+}
+
+.form_contact span {
+    color: whitesmoke;
+}
+
+.form_contact input:focus {
+    background: transparent;
+    color: whitesmoke;
+}
+
+.form_contact textarea {
+    background-color: transparent;
+    color: whitesmoke;
+}
+
+.form_contact textarea:focus {
+    background: transparent;
+    color: whitesmoke;
+}
+
+.form_contact div {
+    background-color: transparent;
 }
 
 label {
@@ -363,7 +393,7 @@ h6 {
 
 .block__upside1 {
     position: relative;
-    max-width: 300px;
+    max-width: max-content;
     margin: auto;
     overflow: hidden;
 }
@@ -543,18 +573,6 @@ footer.footer {
     }
     navbar.navbar img {
         width: 120px !important;
-    }
-    nav {
-        flex-direction: column;
-        gap: 10px 0;
-    }
-    nav .location_phone {
-        flex-direction: column;
-        gap: 5px !important;
-    }
-    nav p,
-    a {
-        font-size: 10px !important;
     }
     #text {
         width: 100%;

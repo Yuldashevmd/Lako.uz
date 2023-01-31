@@ -10,7 +10,7 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    font-family: "Times New Roman", sans-serif;
+    font-family: "Segoe UI", sans-serif;
 }
 
 a {
@@ -132,101 +132,18 @@ h6 {
     font-size: 13px;
 }
 
-.header__block {
-    width: 50%;
-    margin: 0 auto;
-    height: 100%;
-    align-items: center;
-    padding-top: 8%;
+.input-group {
+    border: 1px solid whitesmoke;
+    padding: 0 5px;
+    border-radius: 6px;
 }
 
-.header__date {
-    width: 90%;
-    min-height: fit-content;
-    /* display: flex; */
-    flex-flow: wrap;
-}
-
-.date__days {
-    min-width: 18%;
-    height: 120px;
-    border: 2px solid var(--background);
-    display: flex;
-    flex-flow: column;
-    /* align-items: center; */
-    justify-content: center;
-}
-
-.date__hours {
-    min-width: 18%;
-    height: 120px;
-    border: 2px solid var(--background);
-    display: flex;
-    flex-flow: column;
-    /* align-items: center; */
-    justify-content: center;
-}
-
-.date__minutes {
-    min-width: 18%;
-    height: 120px;
-    border: 2px solid var(--background);
-    display: flex;
-    flex-flow: column;
-    /* align-items: center; */
-    justify-content: center;
-}
-
-.date__seconds {
-    min-width: 18%;
-    height: 120px;
-    border: 2px solid var(--background);
-    display: flex;
-    flex-flow: column;
-    /* align-items: center; */
-    justify-content: center;
-}
-
-span {
-    font-size: 55px;
+.input-group input {
+    border: none;
 }
 
 h6 {
     font-size: 15px;
-    /* padding-bottom: 5px; */
-}
-
-#email {
-    min-width: 280px;
-    height: 40px;
-    padding: 4px 8px;
-    outline: none;
-    border: 1px solid var(--background);
-    background: transparent;
-    color: var(--color);
-    transition: box-shadow 0.2s ease-in-out;
-    user-select: none;
-}
-
-#email:focus {
-    box-shadow: 0 0 15px 0.5px var(--background);
-}
-
-#btn {
-    min-width: 110px;
-    height: 40px;
-    border: none;
-    background: var(--background);
-    color: var(--color);
-    font-size: 18px;
-}
-
-#btn:hover {
-    opacity: 0.9;
-}
-
-#btn:active {
-    background: rgb(13, 13, 177);
 }
 
 .header__end h6 {
@@ -257,10 +174,6 @@ h6 {
     background: var(--background);
     color: var(--color);
     cursor: pointer;
-}
-
-#color {
-    color: var(--background);
 }
 
 
@@ -430,57 +343,6 @@ h6 {
 .toast-success {
     background-color: rgb(40, 199, 93);
 }
-
-
-/* animations for section 2 */
-
-@keyframes first {
-    from {
-        transform: translate(-200px) scale(0) rotate(180deg);
-    }
-    to {
-        transform: translate(0px) scale(1);
-    }
-}
-
-@keyframes second {
-    from {
-        transform: translateY(-200px) scale(0) rotate(-180deg);
-    }
-    to {
-        transform: translate(0px) scale(1);
-    }
-}
-
-@keyframes third {
-    from {
-        transform: translateY(200px) scale(0) rotate(180deg);
-    }
-    to {
-        transform: translate(0px) scale(1);
-    }
-}
-
-@keyframes four {
-    from {
-        transform: translate(200px) scale(0) rotate(180deg);
-    }
-    to {
-        transform: translate(0px) scale(1);
-    }
-}
-
-@keyframes after {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 0.7;
-    }
-}
-
-
-/* section 2 end */
 
 
 /* footer start */

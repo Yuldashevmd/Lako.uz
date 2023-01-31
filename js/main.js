@@ -1,32 +1,39 @@
 // carousel start
-const buttons = document.querySelectorAll("[data-slide-direction]");
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const offset = button.dataset.slideDirection === "next" ? 1 : -1;
-    changeSlide(offset);
-  });
-});
+const delay = 4000; //ms
 
-const changeSlide = (offset) => {
-  const slides = document.querySelector(".slides");
-  const activeSlide = slides.querySelector("[data-active-slide]");
-  let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-  newIndex =
-    newIndex < 0
-      ? slides.children.length - 1
-      : newIndex === slides.children.length
-      ? 0
-      : newIndex;
-  slides.children[newIndex].dataset.activeSlide = true;
-  delete activeSlide.dataset.activeSlide;
+const slides = document.querySelector(".slides");
+const slidesCount = slides.childElementCount;
+const maxLeft = (slidesCount - 1) * 100 * -1;
 
-  const circles = document.querySelector(".slides-circles");
-  const activeCircle = circles.querySelector("[data-active-slide]");
-  circles.children[newIndex].dataset.activeSlide = true;
-  delete activeCircle.dataset.activeSlide;
+let current = 0;
+
+function changeSlide(next = true) {
+  if (next) {
+    current += current > maxLeft ? -100 : current * -1;
+  } else {
+    current = current < 0 ? current + 100 : maxLeft;
+  }
+
+  slides.style.left = current + "%";
+}
+
+let autoChange = setInterval(changeSlide, delay);
+const restart = function () {
+  clearInterval(autoChange);
+  autoChange = setInterval(changeSlide, delay);
 };
 
-setInterval(changeSlide.bind(null, 1), 6000);
+// Controls
+document.querySelector(".next-slide").addEventListener("click", function () {
+  changeSlide();
+  restart();
+});
+
+document.querySelector(".prev-slide").addEventListener("click", function () {
+  changeSlide(false);
+  restart();
+});
+
 // carousel end
 
 // form start

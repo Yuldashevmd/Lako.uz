@@ -15,7 +15,16 @@
 </head>
 
 <body>
+
     <!-- Navbar start -->
+    <div class="minimized_nav_text">
+        <button class="btn btn-secondary w-25 close_hamburger">></button>
+        <ul>
+            <a href="#header">Главная</a>
+            <a href="#footer">Контакты</a>
+            <a href="#section2">О нас</a>
+        </ul>
+    </div>
     <div class="navbar-main">
         <navbar class="container-fluid px-5 navbar d-flex justify-content-between align-items-center ">
             <div class=" d-flex align-items-center">
@@ -23,17 +32,21 @@
                     <img src="./img/logo.png" alt="logo">
                 </a>
             </div>
-            <div>
+            <div class="full_nav_text">
                 <ul class="d-flex m-0 gap-5 p-0">
                     <li><a href="#header">Главная</a></li>
                     <li><a href="#footer">Контакты</a></li>
                     <li><a href="#section2">О нас</a></li>
                 </ul>
             </div>
-            <div>
+            <div class="hamburger_menu">
+                =
+            </div>
+            <div class="phone_call">
                 <a href="tel:+998 71 200 25 55"><i class="bi bi-telephone-fill"></i> +998 71 200 25 55</a>
             </div>
         </navbar>
+
     </div>
     <!-- toast -->
     <div class="toast toast-warning"></div>
@@ -88,14 +101,14 @@
         <div class="container-fluid px-5">
             <div class="section1__main__title mx-auto text-center ">
                 <h2 style="font-weight: 500; margin-top: 110px; ">Преимущество</h2>
-                <div class="section1__prize row my-4 w-xl-100 w-lg-75 w-md-50 w-sm-25 ">
-                    <div class="section1__line__left col-5 d-flex justify-content-end w-xl-100 w-lg-75 w-md-50 w-sm-25 ">______________________</div>
+                <div class="section1__prize  my-4 w-xl-100 w-lg-75 w-md-50 w-sm-25 ">
+                    <div class="section1__line__left d-flex justify-content-end w-xl-100 w-lg-75 w-md-50 w-sm-25 ">______________________</div>
 
-                    <div class="section1__prize__icon col-2 w-xl-100 w-lg-75 w-md-50 w-sm-25 ">
+                    <div class="section1__prize__icon  w-100 ">
                         <i class="fas fa-gift "></i>
                     </div>
 
-                    <div class="section1__line__right col-5 d-flex justify-content-start w-xl-100 w-lg-75 w-md-50 w-sm-25 ">______________________</div>
+                    <div class="section1__line__right  d-flex justify-content-start w-xl-100 w-lg-75 w-md-50 w-sm-25 ">______________________</div>
                 </div>
             </div>
 
@@ -143,14 +156,14 @@
         <div class="container-fluid px-5 ">
             <div class="section2__main__title w-50 mx-auto text-center ">
                 <h2 style="font-weight: 500; padding-top: 110px; color: #fff; ">О нас</h2>
-                <div class="section2__prize row my-4 ">
-                    <div class="section2__line__left col-5 d-flex justify-content-end w-xl-100 w-lg-75 w-md-50 w-sm-25 ">____________________</div>
+                <div class="section2__prize  my-4 ">
+                    <div class="section2__line__left  d-flex justify-content-end w-xl-100 w-lg-75 w-md-50 w-sm-25 ">____________________</div>
 
-                    <div class="section2__prize__icon col-2 ">
+                    <div class="section2__prize__icon ">
                         <i class="fas fa-users "></i>
                     </div>
 
-                    <div class="section2__line__right col-5 d-flex justify-content-start w-xl-100 w-lg-75 w-md-50 w-sm-25 ">____________________</div>
+                    <div class="section2__line__right  d-flex justify-content-start w-xl-100 w-lg-75 w-md-50 w-sm-25 ">____________________</div>
                 </div>
                 <p style="color:grey; font-size: 16px; text-align: left; " class="my-3 ">Lako специализируется на изготовлении корпоративной сувенирной продукции. У нас Вы можете заказать корпоративные подарки для Ваших партнеров и коллег, промо-продукцию для проведения акций, выставок и других мероприятий, а также получить
                     консультацию о разных методах нанесения на изделия, подобрать сувениры под Вашу стилистику и бюджет. </p>
@@ -200,11 +213,11 @@
                     <a href="https://www.instagram.com/infolakouz/">Instagram</a>
                 </div>
             </div>
-            <div>
+            <div class="footer_menu">
                 <ul class="d-flex flex-column m-0 gap-4">
-                    <li><a href="#header">Главная</a></li>
-                    <li><a href="#footer">Контакты</a></li>
-                    <li><a href="#section2">О нас</a></li>
+                    <li><a href="#header">-Главная</a></li>
+                    <li><a href="#footer">-Контакты</a></li>
+                    <li><a href="#section2">-О нас</a></li>
                 </ul>
             </div>
             <div>
@@ -214,7 +227,7 @@
                             <i class="bi bi-geo-alt-fill"></i>
                             <a href="https://yandex.uz/maps/org/premier_print/83695593968/?ll=69.198835%2C41.278821&z=17" target="_blank" class=" m-0 p-0">Чиланзарский район, массив Чиланзор, квартал Ц, 6А</a>
                         </div>
-                        <div class="d-flex align-items-center gap-2">
+                        <div class="footer__phone d-flex align-items-center gap-2">
                             <i class="bi bi-telephone-fill"></i>
                             <p class="m-0 p-0"><a href="tel:+998 71 200 25 55">+998 71 200 25 55</a></p>
                         </div>

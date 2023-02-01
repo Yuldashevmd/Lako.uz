@@ -108,3 +108,18 @@ formSubmit.addEventListener("click", (e) => {
   }
 });
 // form end
+
+// hamburger-menu start
+let hamburgBtn = document.querySelector(".hamburger_menu");
+let closeHamburgBtn = document.querySelector(".close_hamburger");
+let miniMenu = document.querySelector(".minimized_nav_text");
+
+hamburgBtn.addEventListener("click", () => {
+  console.log("clicked open btn");
+  miniMenu.style.display = "block";
+});
+closeHamburgBtn.addEventListener("click", () => {
+  console.log("clicked close btn");
+  miniMenu.style.display = "none";
+});
+// hamburger-menu end

@@ -66,6 +66,22 @@ formSubmit.addEventListener("click", (e) => {
       toast.style.display = "none";
       toast.classList.remove("toast-warning");
     }, 2000);
+  } else if (userName.value.length < 4) {
+    toast.style.display = "flex";
+    toast.classList.add("toast-warning");
+    toast.textContent = "Ism juda qisqa...";
+    setTimeout(() => {
+      toast.style.display = "none";
+      toast.classList.remove("toast-warning");
+    }, 2000);
+  } else if (userPhone.value.length < 9) {
+    toast.style.display = "flex";
+    toast.classList.add("toast-warning");
+    toast.textContent = "Telefon raqam notogri kiritildi juda qisqa...";
+    setTimeout(() => {
+      toast.style.display = "none";
+      toast.classList.remove("toast-warning");
+    }, 2000);
   } else {
     formSubmit.setAttribute("disabled", true);
     toast.classList.add("toast-success");
@@ -81,7 +97,7 @@ formSubmit.addEventListener("click", (e) => {
       phone: userPhone.value,
       comment: userComment.value ?? "",
     };
-    fetch("lako/calluser", {
+    fetch("https://forms.amocrm.ru", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -123,3 +139,35 @@ closeHamburgBtn.addEventListener("click", () => {
   miniMenu.style.display = "none";
 });
 // hamburger-menu end
+
+// scroll-navbar
+let navbar = document.querySelector(".navbar-main");
+let arrowBtn = document.querySelector(".arrow-top");
+
+arrowBtn.addEventListener("click", () => {
+  let windowSize = document.documentElement;
+  windowSize.scrollTo(0, 0);
+});
+
+window.addEventListener("scroll", () => {
+  let windowSize = document.documentElement;
+  if (windowSize.scrollTop.toFixed(0) > 300) {
+    navbar.style.opacity = "0.5";
+    navbar.style.background = "coralgrey";
+    if (windowSize.scrollTop.toFixed(0) > 800) {
+      arrowBtn.style.transform = "translateX(0)";
+    }
+    if (windowSize.scrollTop.toFixed(0) < 800) {
+      arrowBtn.style.transform = "translateX(150%)";
+    }
+  }
+  if (windowSize.scrollTop.toFixed(0) < 300) {
+    navbar.style.opacity = "1";
+    navbar.style.background = "whitesmoke";
+  }
+});
+
+navbar.addEventListener("mouseenter", () => {
+  navbar.style.opacity = "1";
+  navbar.style.background = "whitesmoke";
+});

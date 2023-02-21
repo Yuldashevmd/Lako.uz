@@ -11,6 +11,7 @@
   list-style: none;
   text-decoration: none;
   font-family: Verdana, sans-serif;
+  scroll-behavior: smooth !important;
 }
 
 a {
@@ -135,9 +136,9 @@ header .header_content {
   width: 50%;
   height: 500px;
   color: whitesmoke;
-  padding: 20px 24px;
   backdrop-filter: blur(5px);
   background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
 }
 
 .form_contact input {

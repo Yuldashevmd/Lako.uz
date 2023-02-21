@@ -35,95 +35,8 @@ document.querySelector(".prev-slide").addEventListener("click", function () {
 });
 
 // carousel end
-// number start
-document.getElementById("phone").addEventListener("input", function (e) {
-  var x = e.target.value
-    .replace(/\D/g, "")
-    .match(/(\d{0,2})(\d{0,3})(\d{0,4})/);
-  e.target.value = !x[2]
-    ? x[1]
-    : "(" + x[1] + ") " + x[2] + (x[3] ? "-" + x[3] : "");
-});
-// number end
-// form start
-const userName = document.querySelector("#name");
-const userPhone = document.querySelector("#phone");
-const userComment = document.querySelector("#comment");
-const formSubmit = document.querySelector("#submit");
-const message = document.querySelector("#message");
-const toast = document.querySelector(".toast");
-let newUser = {};
 
-// get-values-from-inputs
-formSubmit.addEventListener("click", (e) => {
-  e.preventDefault();
-  if (userName.value === "" || userPhone.value === "") {
-    toast.style.display = "flex";
-    toast.classList.add("toast-warning");
-    toast.textContent =
-      "Ism yoki telefon raqam notog'ri kirildi, iltimos qayta urinib ko'ring...";
-    setTimeout(() => {
-      toast.style.display = "none";
-      toast.classList.remove("toast-warning");
-    }, 2000);
-  } else if (userName.value.length < 4) {
-    toast.style.display = "flex";
-    toast.classList.add("toast-warning");
-    toast.textContent = "Ism juda qisqa...";
-    setTimeout(() => {
-      toast.style.display = "none";
-      toast.classList.remove("toast-warning");
-    }, 2000);
-  } else if (userPhone.value.length < 9) {
-    toast.style.display = "flex";
-    toast.classList.add("toast-warning");
-    toast.textContent = "Telefon raqam notogri kiritildi juda qisqa...";
-    setTimeout(() => {
-      toast.style.display = "none";
-      toast.classList.remove("toast-warning");
-    }, 2000);
-  } else {
-    formSubmit.setAttribute("disabled", true);
-    toast.classList.add("toast-success");
-    toast.style.display = "flex";
-    toast.textContent =
-      "Ma'lumotlar yuborildi! tez orada siz bilan bog'lanamiz";
-    setTimeout(() => {
-      toast.style.display = "none";
-      toast.classList.remove("toast-success");
-    }, 2000);
-    newUser = {
-      name: userName.value,
-      phone: userPhone.value,
-      comment: userComment.value ?? "",
-    };
-    fetch("https://forms.amocrm.ru", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(newUser),
-    })
-      .then((res) => res.json())
-      .then((res) => console.log(res, "res"))
-      .catch((err) => console.log(err, "err"));
-    message.style.color = "green";
-    message.textContent = "Запрос отправлено...";
 
-    setTimeout(() => {
-      userName.value = "";
-      userPhone.value = "";
-      userComment.value = "";
-      message.textContent = "";
-    }, 1500);
-    setTimeout(() => {
-      formSubmit.disabled = false;
-    }, 2500);
-    console.log(newUser);
-  }
-});
-// form end
 
 // hamburger-menu start
 let hamburgBtn = document.querySelector(".hamburger_menu");
@@ -144,9 +57,10 @@ closeHamburgBtn.addEventListener("click", () => {
 let navbar = document.querySelector(".navbar-main");
 let arrowBtn = document.querySelector(".arrow-top");
 
-arrowBtn.addEventListener("click", () => {
+arrowBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   let windowSize = document.documentElement;
-  windowSize.scrollTo(0, 0);
+  windowSize.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 window.addEventListener("scroll", () => {
@@ -160,14 +74,13 @@ window.addEventListener("scroll", () => {
     if (windowSize.scrollTop.toFixed(0) < 800) {
       arrowBtn.style.transform = "translateX(150%)";
     }
-  }
-  if (windowSize.scrollTop.toFixed(0) < 300) {
+  } else {
     navbar.style.opacity = "1";
     navbar.style.background = "whitesmoke";
   }
 });
 
-navbar.addEventListener("mouseenter", () => {
+navbar.addEventListener("mouseover", () => {
   navbar.style.opacity = "1";
   navbar.style.background = "whitesmoke";
 });
